@@ -1,0 +1,155 @@
+.MF1-page {
+  background-image: url("../Images/PageBg.jpg");
+  background-repeat: no-repeat;
+  height: 672px;
+  width: 100%;
+  margin-left: -16px;
+  background-size: cover;
+  margin-top: -112px;
+}
+
+.MF1-flashlogo {
+  margin-top: 130px;
+  /* margin-left: 100px; */
+  margin-bottom: 30px;
+}
+.MF1-header {
+  color: #832625;
+  letter-spacing: -1px;
+  /* margin-left: 98px; */
+  margin-top: -15px;
+  margin-bottom: 45px;
+  font-size: 25px;
+}
+
+.MF1-labelInput {
+  padding: -54px;
+  /* font-family: sans-serif; */
+  font-size: 11px;
+  /* padding-left: 110px; */
+  padding-right: 7px;
+  padding-left: -39px;
+  margin-top: -24px;
+  /* font-weight: bold; */
+}
+
+.MF1-labelInput1 {
+  padding: -54px;
+  font-family: sans-serif;
+  font-size: 11px;
+  padding-left: 0px;
+  padding-right: 7px;
+  padding-left: -64px;
+  margin-top: -24px;
+  margin-left: -20px;
+  /* font-weight: bold */
+}
+
+.MF1-Label {
+  color: black;
+  font-size: 11px;
+}
+.MF1-Input {
+  height: 32px;
+  width: 211px;
+  /* background: transparent; */
+  outline: none;
+  /* font-weight: bold */
+}
+
+.MF1-checkbox {
+  /* margin-left: 100px; */
+  margin-top: 20px;
+  color: #832625;
+}
+.MF1-checkboxP {
+  display: flex;
+  margin-left: 20px;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+  margin-top: -22px;
+  width: 460px;
+}
+
+.MF1-Button {
+  margin-left: 0px;
+  border: 1px solid #832625;
+  height: 34px;
+  width: 94px;
+  color: #fff;
+  background-color: #832625;
+  /* float: right; */
+  padding: 3px;
+  margin-top: -5px;
+  border-radius: 0%;
+}
+
+@media only screen and (max-width: 480px) {
+  * {
+    box-sizing: border-box;
+    accent-color: rgb(230, 103, 124);
+  }
+  #form1 {
+    width: 340px;
+  }
+  .MF1-flashlogo {
+    margin-top: 10rem;
+    margin-left: 40px;
+    width: 13rem;
+  }
+
+  .MF1-header {
+    font-size: 25px;
+    margin-left: 40px;
+    width: auto;
+  }
+  .MF1-Label {
+    color: black;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .MF1-Input {
+    height: 40px;
+    width: 70vw;
+    outline: none;
+    font-size: 16px;
+    /* font-weight: bold; */
+    margin-left: 10px;
+    color: rgb(99, 202, 51);
+    border: 1.5px solid grey;
+    border-radius: 3px;
+    padding-left: 12px;
+  }
+
+  .MF1-labelInput {
+    color: black;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .MF1-labelInput1 {
+    color: black;
+    font-size: 20px;
+    margin-left: 42px;
+    margin-top: 20px;
+  }
+  .MF1-checkbox {
+    margin-left: 50px;
+  }
+  .MF1-checkboxP {
+    margin-left: 77px;
+    width: auto;
+  }
+  .MF1-Button {
+    margin-left: 48px;
+    margin-top: 4px;
+    height: 53px;
+    width: 80vw;
+    /* font-weight: bold; */
+    font-size: 25px;
+  }
+  input:focus {
+    border: 2px solid rgb(230, 103, 124);
+  }
+}

@@ -1,0 +1,123 @@
+
+.MF {
+    margin-top: -46px;
+    margin-left: 30px;
+  }
+  .MFUl {
+  counter-reset: step;
+  display: table;
+  width: 89%;
+  padding: 0px 0 30px;
+  table-layout: fixed;
+  min-height: 105px;
+  }
+  .MFLi {
+  list-style: none;
+  text-align: center;
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  height: 60px;
+  }
+  
+  .MFSpan {
+  /* background: #fff; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9;
+  width: 32;
+  height: 32;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #832625;
+  -webkit-transition: 0.7s all;
+  -o-transition: 0.7s all;
+  -moz-transition: 0.7s all;
+  transition: 0.7s all;
+  background:#6b6969;
+  }
+  
+  .MFUl li > .MFSpan {
+  /* background: #fff; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9;
+  width: 42px;
+  height: 42px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #832625;
+  -webkit-transition: 0.7s all;
+  -o-transition: 0.7s all;
+  -moz-transition: 0.7s all;
+  transition: 0.7s all;
+  }
+
+  .MFUl li {
+  list-style: none;
+  text-align: center;
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  height: 60px;
+  }
+  .MFUl .MF-detail strong {
+  width: 104%;
+  color: black;
+  display: block;
+  margin-bottom: 0;
+  font-size: 13px;
+  }
+  .MFUl .MF-detail span {
+  font-weight: bold;
+  color: black;
+  font-size: 10px;
+  margin-left: 0px
+  }
+  
+  .MFUl li:before {
+  content: "";
+  width: 56%;
+  height: 1px;
+  background: #832625;
+  position: absolute;
+  right: -26%;
+  top: 50.9%;
+  z-index: 9;
+  }
+  .MFUl li:last-child::before {
+   background: none;
+  }
+  
+  .MFUl li>span:after{
+    background: url('../Images/sprite.png') no-repeat;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 23px;
+    height: 23px;
+    margin: auto;
+    background-position: -19px -275px;
+  }
+  /* .MFUl li>span.MfUl:after
+  {
+    /* background-position: -19px -275px; 
+  } */
+  .MF-detail{
+    margin-top:88px;
+  }

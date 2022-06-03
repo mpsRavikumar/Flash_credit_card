@@ -1,0 +1,7 @@
+.header {
+  grid-area: header;
+  background-image: url("../Images/header_image.png");
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}

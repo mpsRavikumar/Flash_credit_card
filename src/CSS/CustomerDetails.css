@@ -1,0 +1,190 @@
+.header-image {
+  width: 100%;
+}
+.header-p {
+  font-size: 30px;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: -53px;
+  font-weight: bold;
+}
+.GS-page {
+  background-image: url("../Images/PageBg.jpg");
+  background-repeat: no-repeat;
+  height: 672px;
+  width: 100%;
+  margin-left: -16px;
+  background-size: cover;
+  margin-top: -112px;
+}
+
+.GS-flashlogo {
+  margin-top: 139px;
+  /* margin-left: 93px; */
+  margin-bottom: 30px;
+}
+.getStarted {
+  margin-top: -6px;
+  color: #832625;
+  letter-spacing: -1px;
+  /* margin-left: 90px; */
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.customerDetailsIcon {
+  height: 86px;
+  width: 159px;
+  /* margin-left: 87px; */
+  margin-top: 19px;
+  background-color: #832625;
+  border-top-left-radius: 8%;
+  border-top-right-radius: 8%;
+}
+.customerDetailsIcon img {
+  height: 33px;
+  width: 51px;
+  margin-top: 23px;
+  margin-left: 22px;
+}
+.customerDetailsWord {
+  color: white;
+  margin-left: 0px;
+  margin-top: 3px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  list-style: none;
+}
+.GS-form-border {
+  /* margin-left: 87px; */
+  margin-top: -16px;
+  /* margin-right: 70px; */
+  border: 1px solid #832625;
+  width: 90%;
+  min-height: 100px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  padding-bottom: 21px;
+}
+.labelInput {
+  padding: 20px 40px 20px 0px;
+  font-family: sans-serif;
+  font-size: 12px;
+  padding-left: 31px;
+  border-radius: 0%;
+  font-weight: bold;
+}
+
+.labelInput2 {
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 12px;
+  border-radius: 0%;
+  font-weight: bold;
+  margin-left: -50px;
+  /* margin-left: -32px; */
+}
+
+.CustomerDetailsInput {
+  height: 34px;
+  width: 222px;
+  font-weight: bold;
+}
+.customerDetailsButton {
+  margin-left: 20px;
+  margin-bottom: 1px;
+  margin-top: -8px;
+  height: 38px;
+  width: 90px;
+  color: #fff;
+  background-color: #832625;
+  border-radius: 0%;
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+  .header-image {
+    width: 100%;
+  }
+
+  .header-p {
+    margin-top: -19px;
+    left: -15px;
+    font-size: 13px;
+  }
+
+  .GS-flashlogo {
+    margin-top: 11rem;
+    margin-left: 30px;
+    width: 13rem;
+  }
+
+  .getStarted {
+    font-size: 29px;
+    margin-left: 28px;
+  }
+
+  .customerDetailsIcon {
+    height: 58px;
+    width: auto;
+    margin-left: 28px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    margin-bottom: 50px;
+  }
+
+  .customerDetailsIcon img {
+    margin-top: 12px;
+    margin-left: 0px;
+  }
+  .customerDetailsWord {
+    display: inline;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    /* padding-bottom: -10px !important; */
+  }
+
+  .GS-form-border {
+    border: none;
+    margin-top: -30px;
+  }
+  .labelInput {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+
+  .labelInput2 {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+
+  .CustomerDetailsInput {
+    height: 51px;
+    width: 80vw;
+    color: rgb(99, 202, 51);
+    border: 1.5px solid grey;
+    border-radius: 3px;
+    padding-left: 12px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    /* margin-top: 1px; */
+  }
+
+  .customerDetailsButton {
+    margin-left: 28px;
+    margin-top: 4px;
+    height: 53px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  input:focus {
+    border: 2px solid rgb(230, 103, 124);
+  }
+  input:invalid {
+    color: rgb(214, 36, 36);
+  }
+}

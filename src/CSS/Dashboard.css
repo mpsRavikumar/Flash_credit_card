@@ -1,0 +1,195 @@
+body{
+  font: 'Futura-book';
+}
+
+.header-image {
+  width: 100%;
+}
+.header-p {
+  font-size: 20px;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: -53px;
+  color: #832625;
+}
+.Dash-page {
+  background-image: url("../Images/PageBg.jpg");
+  background-repeat: no-repeat;
+  height: 672px;
+  width: 100%;
+  margin-left: -16px;
+  background-size: cover;
+  margin-top: -112px;
+}
+.dash-img {
+  background-size: cover;
+  margin-left: 0px;
+  width: 100%;
+  height: 562px;
+  margin-top: -16px;
+}
+.Dash-page h1 {
+  color: black;
+  text-align: left;
+  margin-top: 186px;
+  font-size: 30px;
+  /* margin-left: 70px; */
+}
+
+.Dash-page p {
+  font-size: 20px;
+  font-variant: bold;
+  padding-left: -7%;
+  color: #832625;
+  text-align: center;
+  font-weight: bold;
+}
+.existingCustomerLogoOuter {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid #832625;
+  -webkit-box-shadow: 0px 6px 31px 1px rgb(0 0 0 / 50%);
+  -moz-box-shadow: 0px 6px 31px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 6px 31px 1px rgb(0 0 0 / 50%);
+  top: -40px;
+  left: -34px;
+}
+.existingCustomerLogo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: url("../Images/existingCustomerLogo.png") no-repeat;
+  width: 53px;
+  height: 46px;
+}
+.existingCustomer {
+  background: url("../Images//existingCustomerBG.png") no-repeat;
+  width: 562px;
+  height: 257px;
+  margin-top: 84px;
+  text-align: center;
+  /* margin-left: 100px; */
+}
+.Dash-page h4 {
+  color: white;
+  text-align: center;
+  margin-top: -3px;
+  position: absolute;
+  margin-left: 51px;
+  font-size: 23px;
+}
+.buttons {
+  margin-top: 29px;
+  position: absolute;
+  margin-left: 140px;
+}
+.common-button {
+  font: 13px/18px;
+  padding: 8px 20px;
+  width: 93px;
+  /* height: 40px; */
+  color: #832625;
+  background: white;
+  margin: 10px 0;
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #832625;
+  border-radius: 0%;
+}
+#button1 {
+  margin-right: 25px;
+}
+.dashImage {
+  width: 500px;
+  margin-left: 30px;
+  margin-top: 90px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+
+
+  .header-image {
+    width: 100%;
+  }
+
+  .header-p {
+    margin-top: -19px;
+    left: -15px;
+    font-size: 13px;
+}
+  .Dash-page h1 {
+    text-align: center;
+    font-size: 23px;
+    width: 100%;
+  }
+
+  .Dash-page p {
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .existingCustomer {
+    width: 100%;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    padding: 0%;
+    position: relative;
+    top: -26px;
+
+  }
+  .Dash-page{
+    margin-left: 0;
+  }
+  .existingCustomerLogoOuter {
+    width: 90px;
+    height: 90px;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .Dash-page h4 {
+
+    margin-left: 17px;
+    font-size: 18px;
+  }
+
+  .common-button {
+    padding: 7px 13px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .mobile-padding{
+    padding: 0;
+  }
+  .inner-content{
+    padding: 0 15px;;
+  }
+  .buttons {
+    margin-top: 29px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    display: flex;
+    margin-top: 0;
+    top: 45%;
+}
+#button1 {
+  margin-right: 8px;
+}
+}
