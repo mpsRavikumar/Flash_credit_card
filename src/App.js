@@ -1,3 +1,4 @@
+import "./App.css";
 import { createContext, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CustomerDetails from "./Pages/CustomerDetails";

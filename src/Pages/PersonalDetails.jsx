@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 // import ActiveBar from "../component/ActiveBar";
 import "../CSS/PersonalDetails.css";
-import header_image from "../Images/header_image.png";
-import flash_logo from "../Images/flash-logo.png";
 import { FormContext } from "../App";
 import axios from "axios";
+import Header from "../component/Header";
+import Logo from "../component/Logo";
+import Footer from "../component/Footer";
+import SubTitle from "../component/SubTitle";
 
 function PersonalDetails() {
   const {
@@ -70,187 +72,153 @@ function PersonalDetails() {
       });
   };
   return (
-    <div>
-      <header className="">
-        <img className="header-image" src={header_image} alt="" />
-        <p className="header-p">Credit Card Online Application</p>
-      </header>
+    <div className="grid-container">
+      <Header />
+      <div className="main">
+        <Logo />
+        <SubTitle text="We would like to know you beter " />
+        <div className="PersonalDetails_forms">
+          <form
+            method="post"
+            className="PersonalDetails_form"
+            onSubmit={onSubmit}
+            id="form2"
+          >
+            <div className="PersonalDetails_form1">
+              <label className="PersonalDetails_label" htmlFor="Name">
+                Name
+              </label>
+              <input
+                className="PersonalDetails_input"
+                name="name"
+                type="text"
+                onChange={onChange}
+                required
+              />
 
-      <div className="MF1-page">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-6">
-              <div className="MF1-logo">
-                <img className="MF1-flashlogo" src={flash_logo} alt="" />
-              </div>
-              <div>
-                <h1 className="MF1-header">We would like to know you better</h1>
-              </div>
+              <label className="PersonalDetails_label" htmlFor="Name">
+                Date of Birth
+              </label>
+              <input
+                className="PersonalDetails_input"
+                name="dob"
+                type="date"
+                onChange={onChange}
+                required
+              />
 
-              <form method="post" onSubmit={onSubmit} id="form1">
-                <div className="row">
-                  <div className="col-sm-6 MF1-labelInput ">
-                    {/* <label className="MF1-Label" htmlFor="Name">
-                      S. No : 1
-                    </label>
-                    <br />
-                    <input className="MF1-Input" type="number" required />
-                    <br />
-                    <br /> */}
+              <label className="PersonalDetails_label" htmlFor="Name">
+                Gender
+              </label>
+              <select
+                className="PersonalDetails_input"
+                name="gender"
+                id=""
+                onChange={onChange}
+                required
+              >
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
 
-                    <label className="MF1-Label" htmlFor="Name">
-                      Name
-                    </label>
-                    <br />
-                    <input
-                      className="MF1-Input"
-                      name="name"
-                      type="text"
-                      onChange={onChange}
-                      required
-                    />
-                    <br />
-                    <br />
-                    <label className="MF1-Label" htmlFor="Name">
-                      Date of Birth
-                    </label>
-                    <br />
-                    <input
-                      className="MF1-Input"
-                      name="dob"
-                      type="date"
-                      onChange={onChange}
-                      required
-                    />
-                    <br />
-                    <br />
-                    <label className="MF1-Label" htmlFor="Name">
-                      Gender
-                    </label>
-                    <br />
-                    <select
-                      className="MF1-Input"
-                      name="gender"
-                      id=""
-                      onChange={onChange}
-                      required
-                    >
-                      <option value="">Select</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                    </select>
-                    <br />
-                    <br />
-                    <label className="MF1-Label" htmlFor="Name">
-                      Current residence address
-                    </label>
-                    <br />
-                    <input
-                      className="MF1-Input"
-                      type="text"
-                      name="current_residence_address"
-                      onChange={onChange}
-                      required
-                    />
-                    <br />
-                    <br />
-                    <label className="MF1-Label" htmlFor="Name">
-                      Education
-                    </label>
-                    <br />
-                    <select
-                      className="MF1-Input"
-                      name="education"
-                      id=""
-                      onChange={onChange}
-                      required
-                    >
-                      <option value="">Education</option>
-                      <option value="Graduate">Graduate</option>
-                      <option value="Post Graduate">Post Graduate</option>
-                      <option value="Diploma">Diploma</option>
-                      <option value="PHD">PHD</option>
-                    </select>
-                    <br />
-                    <br />
-                  </div>
+              <label className="PersonalDetails_label" htmlFor="Name">
+                Current residence address
+              </label>
+              <input
+                className="PersonalDetails_input"
+                type="text"
+                name="current_residence_address"
+                onChange={onChange}
+                required
+              />
 
-                  <div className="col-sm-6 MF1-labelInput1 ">
-                    <label className="MF1-Label" htmlFor="Name">
-                      Mother's Maiden Name
-                    </label>
-                    <br />
-                    <input
-                      className="MF1-Input"
-                      name="mothers_maiden_name"
-                      type="text"
-                      required
-                      onChange={onChange}
-                    />
-                    <br />
-                    <br />
-
-                    <label className="MF1-Label" htmlFor="Name">
-                      City
-                    </label>
-                    <br />
-                    <input
-                      className="MF1-Input"
-                      type="text"
-                      name="city"
-                      onChange={onChange}
-                      required
-                    />
-                    <br />
-                    <br />
-                    <label className="MF1-Label" htmlFor="Name">
-                      State
-                    </label>
-                    <br />
-                    <input
-                      className="MF1-Input"
-                      type="text"
-                      name="state"
-                      onChange={onChange}
-                      required
-                    />
-                    <br />
-                    <br />
-
-                    <label className="MF1-Label" htmlFor="Name">
-                      Email Id
-                    </label>
-                    <br />
-                    <input
-                      className="MF1-Input"
-                      type="email"
-                      name="email"
-                      onChange={onChange}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input className="MF1-checkbox" type="checkbox" required />
-                    <p className="MF1-checkboxP">
-                      I am not a senior officer or relative of a director/senior
-                      officer of Induslnd bank and I am not a director(trustee)
-                      or relative of a directo(trustee) of any other
-                      bank/subsidiary of any bank(mutual funds/venture capital
-                      finds set up by banks).
-                    </p>
-                  </div>
-                </div>
-
-                <button type="submit" className="btn MF1-Button" id="next1">
-                  Next
-                </button>
-              </form>
+              <label className="PersonalDetails_label" htmlFor="Name">
+                Education
+              </label>
+              <select
+                className="PersonalDetails_input"
+                name="education"
+                id=""
+                onChange={onChange}
+                required
+              >
+                <option value="">Education</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Post Graduate">Post Graduate</option>
+                <option value="Diploma">Diploma</option>
+                <option value="PHD">PHD</option>
+              </select>
             </div>
-            <div className="col-sm-6"></div>
-          </div>
+
+            <div className="PersonalDetails_form2">
+              <label className="PersonalDetails_label" htmlFor="Name">
+                Mother's Maiden Name
+              </label>
+              <input
+                className="PersonalDetails_input"
+                name="mothers_maiden_name"
+                type="text"
+                required
+                onChange={onChange}
+              />
+
+              <label className="PersonalDetails_label" htmlFor="Name">
+                City
+              </label>
+              <input
+                className="PersonalDetails_input"
+                type="text"
+                name="city"
+                onChange={onChange}
+                required
+              />
+
+              <label className="PersonalDetails_label" htmlFor="Name">
+                State
+              </label>
+              <input
+                className="PersonalDetails_input"
+                type="text"
+                name="state"
+                onChange={onChange}
+                required
+              />
+
+              <label className="PersonalDetails_label" htmlFor="Name">
+                Email Id
+              </label>
+              <input
+                className="PersonalDetails_input"
+                type="email"
+                name="email"
+                onChange={onChange}
+                required
+              />
+            </div>
+            <div className="PersonalDetails_checkbox">
+              <input
+                className="PersonalDetails_input_checkbox"
+                type="checkbox"
+                required
+              />
+              <p className="PersonalDetails_input_checkbox_para">
+                I am not a senior officer or relative of a director/senior
+                officer of Induslnd bank and I am not a director(trustee) or
+                relative of a directo(trustee) of any other bank/subsidiary of
+                any bank(mutual funds/venture capital finds set up by banks).
+              </p>
+            </div>
+          </form>
+          <button type="submit" form="form2" className="submit_btn">
+            Next
+          </button>
         </div>
+        <Footer />
       </div>
     </div>
+
+    //
   );
 }
 export default PersonalDetails;

@@ -1,7 +1,25 @@
 .header {
   grid-area: header;
-  background-image: url("../Images/header_image.png");
+  /* background-image: url("../Images/header_image.png"); */
+
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  position: relative;
+}
+.hearder_image {
+  width: 100vw;
+  height: 100%;
+}
+.header_text {
+  font-size: 25px;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+  color: rgb(212, 46, 74);
+}
+@media only screen and (max-width: 480px) {
+  .header_text {
+    font-size: 18rem;
+  }
 }

@@ -5,6 +5,9 @@ import header_image from "../Images/header_image.png";
 import flash_logo from "../Images/flash-logo.png";
 import { FormContext } from "../App";
 import axios from "axios";
+import Header from "../component/Header";
+import Logo from "../component/Logo";
+import Footer from "../component/Footer";
 function EmployementDetails() {
   const {
     formData,
@@ -75,244 +78,210 @@ function EmployementDetails() {
       });
   };
   return (
-    <div>
-      <header className="">
-        <img className="header-image" src={header_image} alt="" />
-        <p className="header-p">Credit Card Online Application</p>
-      </header>
+    <div className="grid-container">
+      <Header />
+      <div className="main">
+        <Logo />
 
-      <div className="MF2-page">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-6">
-              <div className="MF2-logo">
-                <img className="MF2-flashlogo" src={flash_logo} alt="" />
-              </div>
-              <div>
-                <h1 className="MF2-header">
-                  We are almost there. Tell us something more about you!
-                </h1>
-              </div>
-              <div className="nature_of_employment">
-                <label className="MF2-Label" htmlFor="Name">
-                  <b>nature of Employment</b>
+        <div className="nature_of_employment">
+          <label className="EmployementDetails_Label">
+            nature of Employment
+          </label>
+          <br />
+          <input
+            type="radio"
+            id="salaried"
+            name="nature"
+            value="salaried"
+            onClick={handleSelfEmployes}
+          />
+          <label htmlFor="salaried" className="EmployementDetails_Label">
+            salaried
+          </label>
+          <input
+            type="radio"
+            name="nature"
+            id="selfemployed"
+            value="selfemployed"
+            style={{ marginLeft: "20px" }}
+            onClick={handleSalaried}
+          />
+          <label htmlFor="selfemployed" className="EmployementDetails_Label">
+            self employed
+          </label>
+          <br />
+        </div>
+
+        {/*  ***********form starts here *********** */}
+        <div className="EmployementDetails_forms">
+          <form
+            method="post"
+            className="EmployementDetails_form"
+            onSubmit={sendData}
+            id="form3"
+          >
+            {salaried ? (
+              <div className="EmployementDetails_form_1">
+                <label className="EmployementDetails_Label" htmlFor="">
+                  Net Annual Income
                 </label>
-                <br />
                 <input
-                  type="radio"
-                  name="nature"
-                  value="salaried"
-                  onClick={handleSelfEmployes}
+                  type="number"
+                  name="net_annual_income"
+                  className="EmployementDetails_Input"
+                  onChange={onChange}
+                  min={0}
+                  required
                 />
-                <label className="MF2-Label">salaried</label>
+
+                <label className="EmployementDetails_Label" htmlFor="Name">
+                  Employer Sector
+                </label>
+                <select
+                  className="EmployementDetails_Input"
+                  name="employee_sector"
+                  onChange={onChange}
+                  required
+                >
+                  <option value="proprietorship">proprietorship</option>
+                  <option value="abc">abc</option>
+                </select>
+
+                <label className="EmployementDetails_Label" htmlFor="Name">
+                  Occupation Code
+                </label>
                 <input
-                  type="radio"
-                  name="nature"
-                  value="selfemployed"
-                  style={{ marginLeft: "20px" }}
-                  onClick={handleSalaried}
+                  onChange={onChange}
+                  name="occupation_code"
+                  className="EmployementDetails_Input"
+                  type="number"
+                  required
                 />
-                <label className="MF2-Label">self employed</label>
-                <br />
+
+                <label className="EmployementDetails_Label" htmlFor="Name">
+                  Source of Fund
+                </label>
+                <select
+                  className="EmployementDetails_Input"
+                  name="source_of_fund"
+                  onChange={onChange}
+                  required
+                >
+                  <option value="Salary">Salary</option>
+                  <option value="abc">abc</option>
+                </select>
+                <label className="EmployementDetails_Label" htmlFor="Name">
+                  Type of Industry
+                </label>
+                <select
+                  className="EmployementDetails_Input"
+                  name="type_of_industry"
+                  onChange={onChange}
+                  required
+                >
+                  <option value="Banking">Banking</option>
+                  <option value="abc">abc</option>
+                </select>
+
+                <label className="EmployementDetails_Label" htmlFor="Name">
+                  Current Organization Name
+                </label>
+                <input
+                  onChange={onChange}
+                  name="current_organization_name"
+                  className="EmployementDetails_Input"
+                  type="text"
+                  required
+                />
+
+                <label className="EmployementDetails_Label" htmlFor="Name">
+                  Tenure in current job(yy)
+                </label>
+                <input
+                  name="tenure_in_current_job"
+                  onChange={onChange}
+                  className="EmployementDetails_Input"
+                  type="number"
+                  required
+                />
+
+                <label className="EmployementDetails_Label" htmlFor="Name">
+                  Total work Experience(yy)
+                </label>
+                <input
+                  name="total_work_experience"
+                  onChange={onChange}
+                  className="EmployementDetails_Input"
+                  type="number"
+                  required
+                />
               </div>
+            ) : (
+              <div className="EmployementDetails_form_1">
+                <label className="EmployementDetails_Label" htmlFor="">
+                  Net Annual Income
+                </label>
+                <input
+                  type="number"
+                  name="net_annual_income"
+                  className="EmployementDetails_Input"
+                  onChange={onChange}
+                  min={0}
+                  required
+                />
 
-              <form method="post" onSubmit={sendData} id="form1">
-                {salaried ? (
-                  <div className="row">
-                    <div className="col-sm-6 MF2-labelInput ">
-                      <label className="MF2-Label" htmlFor="">
-                        Net Annual Income
-                      </label>
-                      <br />
-                      <input
-                        type="number"
-                        name="net_annual_income"
-                        className="CustomerDetailsInput"
-                        onChange={onChange}
-                        min={0}
-                        required
-                      />
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="Name">
-                        Employer Sector
-                      </label>
-                      <select
-                        className="MF1-Input"
-                        name="employee_sector"
-                        onChange={onChange}
-                        required
-                      >
-                        <option value="proprietorship">proprietorship</option>
-                        <option value="abc">abc</option>
-                      </select>
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="Name">
-                        Occupation Code
-                      </label>
-                      <br />
-                      <input
-                        onChange={onChange}
-                        name="occupation_code"
-                        className="MF2-Input"
-                        type="number"
-                        required
-                      />
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="Name">
-                        Source of Fund
-                      </label>
-                      <select
-                        className="MF1-Input"
-                        name="source_of_fund"
-                        onChange={onChange}
-                        required
-                      >
-                        <option value="Salary">Salary</option>
-                        <option value="abc">abc</option>
-                      </select>
-                      <br />
-                      <br />
-                    </div>
+                <label className="EmployementDetails_Label" htmlFor="">
+                  Nature of Business
+                </label>
+                <input
+                  type="text"
+                  name="nature_of_business"
+                  className="EmployementDetails_Input"
+                  onChange={onChange}
+                  required
+                />
 
-                    <div className="col-sm-6 MF1-labelInput1 ">
-                      <label className="MF2-Label" htmlFor="Name">
-                        Type of Industry
-                      </label>
-                      <select
-                        className="MF1-Input"
-                        name="type_of_industry"
-                        onChange={onChange}
-                        required
-                      >
-                        <option value="Banking">Banking</option>
-                        <option value="abc">abc</option>
-                      </select>
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="Name">
-                        Current Organization Name
-                      </label>
-                      <br />
-                      <input
-                        onChange={onChange}
-                        name="current_organization_name"
-                        className="MF2-Input"
-                        type="text"
-                        required
-                      />
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="Name">
-                        Tenure in current job(yy)
-                      </label>
-                      <br />
-                      <input
-                        name="tenure_in_current_job"
-                        onChange={onChange}
-                        className="MF2-Input"
-                        type="number"
-                        required
-                      />
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="Name">
-                        Total work Experience(yy)
-                      </label>
-                      <br />
-                      <input
-                        name="total_work_experience"
-                        onChange={onChange}
-                        className="MF2-Input"
-                        type="number"
-                        required
-                      />
-                    </div>
-                  </div>
-                ) : (
-                  <div className="row">
-                    <div className="col-sm-6 MF2-labelInput ">
-                      <label className="MF2-Label" htmlFor="">
-                        Net Annual Income
-                      </label>
-                      <br />
-                      <input
-                        type="number"
-                        name="net_annual_income"
-                        className="CustomerDetailsInput"
-                        onChange={onChange}
-                        min={0}
-                        required
-                      />
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="">
-                        Nature of Business
-                      </label>
-                      <br />
-                      <input
-                        type="text"
-                        name="nature_of_business"
-                        className="CustomerDetailsInput"
-                        onChange={onChange}
-                        required
-                      />
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="">
-                        Ownership_type
-                      </label>
-                      <br />
-                      <input
-                        type="text"
-                        name="ownership_type"
-                        className="CustomerDetailsInput"
-                        onChange={onChange}
-                        required
-                      />
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="">
-                        NO. of years in business
-                      </label>
-                      <br />
-                      <input
-                        type="number"
-                        name="no_of_years_in_business"
-                        className="CustomerDetailsInput"
-                        onChange={onChange}
-                        required
-                      />
-                      <br />
-                      <br />
-                      <label className="MF2-Label" htmlFor="">
-                        Bank Employee number
-                      </label>
-                      <br />
-                      <input
-                        type="number"
-                        name="bank_employee_no"
-                        className="CustomerDetailsInput"
-                        onChange={onChange}
-                        required
-                      />
-                      <br />
-                      <br />
-                    </div>
-                  </div>
-                )}
-                <button type="submit" className="btn MF2-Button" id="next1">
-                  Next
-                </button>
-              </form>
-              {/* </div> */}
-            </div>
-            <div className="col-sm-6"></div>
-          </div>
+                <label className="EmployementDetails_Label" htmlFor="">
+                  Ownership_type
+                </label>
+                <input
+                  type="text"
+                  name="ownership_type"
+                  className="EmployementDetails_Input"
+                  onChange={onChange}
+                  required
+                />
+
+                <label className="EmployementDetails_Label" htmlFor="">
+                  NO. of years in business
+                </label>
+                <input
+                  type="number"
+                  name="no_of_years_in_business"
+                  className="EmployementDetails_Input"
+                  onChange={onChange}
+                  required
+                />
+
+                <label className="EmployementDetails_Label" htmlFor="">
+                  Bank Employee number
+                </label>
+                <input
+                  type="number"
+                  name="bank_employee_no"
+                  className="EmployementDetails_Input"
+                  onChange={onChange}
+                  required
+                />
+              </div>
+            )}
+          </form>
+          <button type="submit" className="submit_btn" form="form3">
+            Next
+          </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

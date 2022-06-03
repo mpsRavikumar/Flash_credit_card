@@ -1,5 +1,5 @@
-body{
-  font: 'Futura-book';
+body {
+  font: "Futura-book";
 }
 
 .header-image {
@@ -93,7 +93,7 @@ body{
   margin-left: 140px;
 }
 .common-button {
-  font: 13px/18px;
+  font-size: 13px;
   padding: 8px 20px;
   width: 93px;
   /* height: 40px; */
@@ -117,8 +117,6 @@ body{
 
 /* Responsive */
 @media only screen and (max-width: 480px) {
-
-
   .header-image {
     width: 100%;
   }
@@ -127,7 +125,7 @@ body{
     margin-top: -19px;
     left: -15px;
     font-size: 13px;
-}
+  }
   .Dash-page h1 {
     text-align: center;
     font-size: 23px;
@@ -149,9 +147,8 @@ body{
     padding: 0%;
     position: relative;
     top: -26px;
-
   }
-  .Dash-page{
+  .Dash-page {
     margin-left: 0;
   }
   .existingCustomerLogoOuter {
@@ -163,7 +160,6 @@ body{
     margin: 0;
   }
   .Dash-page h4 {
-
     margin-left: 17px;
     font-size: 18px;
   }
@@ -173,11 +169,11 @@ body{
     font-size: 16px;
     font-weight: 600;
   }
-  .mobile-padding{
+  .mobile-padding {
     padding: 0;
   }
-  .inner-content{
-    padding: 0 15px;;
+  .inner-content {
+    padding: 0 15px;
   }
   .buttons {
     margin-top: 29px;
@@ -188,8 +184,8 @@ body{
     display: flex;
     margin-top: 0;
     top: 45%;
-}
-#button1 {
-  margin-right: 8px;
-}
+  }
+  #button1 {
+    margin-right: 8px;
+  }
 }
