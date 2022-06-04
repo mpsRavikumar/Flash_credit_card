@@ -53,75 +53,77 @@ function CustomerDetails() {
     <div className="grid-container">
       <Header />
       <div className="main">
-        <Logo />
-        <SubTitle text="lest get started !" />
-        <div className="widget">
-          <img className="contactIcon" src={contactIcon} alt="contactIcon" />
-          <p className="customertext">customer Details</p>
-        </div>
-        <div className="CustomerDetails_forms">
-          <form
-            className="CustomerDetails_form"
-            id="form1"
-            method="post"
-            onSubmit={onSubmit}
-          >
-            <label className="customerDetails_label" htmlFor="">
-              Mobile Number
-            </label>
-            <input
-              // type="number"
-              name="mobile_no"
-              className="CustomerDetailsInput"
-              onChange={onChange}
-              pattern="^[0-9]{10}$"
-              required
-            />
+        <div className="contain">
+          <Logo />
+          <SubTitle text="lest get started !" />
+          <div className="widget">
+            <img className="contactIcon" src={contactIcon} alt="contactIcon" />
+            <p className="customertext">customer Details</p>
+          </div>
+          <div className="CustomerDetails_forms">
+            <form
+              className="CustomerDetails_form"
+              id="form1"
+              method="post"
+              onSubmit={onSubmit}
+            >
+              <label className="customerDetails_label" htmlFor="">
+                Mobile Number
+              </label>
+              <input
+                // type="number"
+                name="mobile_no"
+                className="CustomerDetailsInput"
+                onChange={onChange}
+                pattern="^[0-9]{10}$"
+                required
+              />
 
-            <label className="customerDetails_label" htmlFor="">
-              Pincode
-            </label>
+              <label className="customerDetails_label" htmlFor="">
+                Pincode
+              </label>
 
-            <input
-              // type="number"
-              name="pincode"
-              className="CustomerDetailsInput"
-              onChange={onChange}
-              pattern="^[0-9]{6}$"
-              required
-            />
-            <label className="customerDetails_label" htmlFor="">
-              PAN Number
-            </label>
-            <input
-              type="text"
-              name="pan_no"
-              className="CustomerDetailsInput"
-              onChange={onChange}
-              // pattern="^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$"
-              required
-            />
+              <input
+                // type="number"
+                name="pincode"
+                className="CustomerDetailsInput"
+                onChange={onChange}
+                pattern="^[0-9]{6}$"
+                required
+              />
+              <label className="customerDetails_label" htmlFor="">
+                PAN Number
+              </label>
+              <input
+                type="text"
+                name="pan_no"
+                className="CustomerDetailsInput"
+                onChange={onChange}
+                // pattern="^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$"
+                required
+              />
 
-            <label className="customerDetails_label" htmlFor="">
-              Net Annual Income
-            </label>
-            <input
-              type="number"
-              name="net_annual_income"
-              className="CustomerDetailsInput"
-              onChange={onChange}
-              min={0}
-              required
-            />
-          </form>
-          <button
-            type="submit"
-            form="form1"
-            className="submit_btn"
-            style={{ margin: "20rem" }}
-          >
-            Next
-          </button>
+              <label className="customerDetails_label" htmlFor="">
+                Net Annual Income
+              </label>
+              <input
+                type="number"
+                name="net_annual_income"
+                className="CustomerDetailsInput"
+                onChange={onChange}
+                min={0}
+                required
+              />
+            </form>
+            <button
+              type="submit"
+              form="form1"
+              className="submit_btn"
+              style={{ margin: "20rem" }}
+            >
+              Next
+            </button>
+          </div>
         </div>
         <Footer />
       </div>

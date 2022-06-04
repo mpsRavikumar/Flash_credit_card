@@ -1,6 +1,6 @@
 .CustomerDetails_forms {
   width: 640rem;
-  border: 2px solid rgb(209, 31, 61);
+  border: 2px solid #832625;
   border-radius: 5rem;
 }
 .CustomerDetails_form {
@@ -25,19 +25,20 @@
   /* padding-left: 5rem; */
 }
 .submit_btn {
-  margin-top: 20rem;
+  margin-left: 0 !important;
+  margin-top: 20rem !important;
   font-size: 20rem;
   height: 40px;
   width: 20vw;
 
   color: white;
-  background-color: rgb(212, 46, 74);
+  background-color: #832625;
   border: none;
 }
 .widget {
   height: 80rem;
   width: 160rem;
-  background-color: rgb(212, 46, 74);
+  background-color: #832625;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,8 +56,11 @@
 
 /* ************ Responsive Design ************  */
 @media only screen and (max-width: 480px) {
+  .contain {
+    width: 90vw;
+  }
   .CustomerDetails_forms {
-    width: fit-content;
+    width: 100%;
   }
   .CustomerDetails_form {
     height: auto;
@@ -77,13 +81,13 @@
     margin: 0rem;
   }
   .CustomerDetails_forms {
-    width: 80vw;
+    width: 100%;
     margin: auto;
     border: none;
   }
 
   .CustomerDetailsInput {
-    width: 70vw;
+    width: 100%;
     margin: 0 0;
     padding-left: 0;
   }
@@ -105,5 +109,6 @@
   }
   .submit_btn {
     width: 90%;
+    margin: 0;
   }
 }

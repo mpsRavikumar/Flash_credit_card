@@ -209,10 +209,10 @@ function PersonalDetails() {
                 any bank(mutual funds/venture capital finds set up by banks).
               </p>
             </div>
+            <button type="submit" form="form2" className="submit_btn">
+              Next
+            </button>
           </form>
-          <button type="submit" form="form2" className="submit_btn">
-            Next
-          </button>
         </div>
         <Footer />
       </div>

@@ -122,99 +122,103 @@ function EmployementDetails() {
           >
             {salaried ? (
               <div className="EmployementDetails_form_1">
-                <label className="EmployementDetails_Label" htmlFor="">
-                  Net Annual Income
-                </label>
-                <input
-                  type="number"
-                  name="net_annual_income"
-                  className="EmployementDetails_Input"
-                  onChange={onChange}
-                  min={0}
-                  required
-                />
+                <div className="contain_1">
+                  <label className="EmployementDetails_Label" htmlFor="">
+                    Net Annual Income
+                  </label>
+                  <input
+                    type="number"
+                    name="net_annual_income"
+                    className="EmployementDetails_Input"
+                    onChange={onChange}
+                    min={0}
+                    required
+                  />
 
-                <label className="EmployementDetails_Label" htmlFor="Name">
-                  Employer Sector
-                </label>
-                <select
-                  className="EmployementDetails_Input"
-                  name="employee_sector"
-                  onChange={onChange}
-                  required
-                >
-                  <option value="proprietorship">proprietorship</option>
-                  <option value="abc">abc</option>
-                </select>
+                  <label className="EmployementDetails_Label" htmlFor="Name">
+                    Employer Sector
+                  </label>
+                  <select
+                    className="EmployementDetails_Input"
+                    name="employee_sector"
+                    onChange={onChange}
+                    required
+                  >
+                    <option value="proprietorship">proprietorship</option>
+                    <option value="abc">abc</option>
+                  </select>
 
-                <label className="EmployementDetails_Label" htmlFor="Name">
-                  Occupation Code
-                </label>
-                <input
-                  onChange={onChange}
-                  name="occupation_code"
-                  className="EmployementDetails_Input"
-                  type="number"
-                  required
-                />
+                  <label className="EmployementDetails_Label" htmlFor="Name">
+                    Occupation Code
+                  </label>
+                  <input
+                    onChange={onChange}
+                    name="occupation_code"
+                    className="EmployementDetails_Input"
+                    type="number"
+                    required
+                  />
 
-                <label className="EmployementDetails_Label" htmlFor="Name">
-                  Source of Fund
-                </label>
-                <select
-                  className="EmployementDetails_Input"
-                  name="source_of_fund"
-                  onChange={onChange}
-                  required
-                >
-                  <option value="Salary">Salary</option>
-                  <option value="abc">abc</option>
-                </select>
-                <label className="EmployementDetails_Label" htmlFor="Name">
-                  Type of Industry
-                </label>
-                <select
-                  className="EmployementDetails_Input"
-                  name="type_of_industry"
-                  onChange={onChange}
-                  required
-                >
-                  <option value="Banking">Banking</option>
-                  <option value="abc">abc</option>
-                </select>
+                  <label className="EmployementDetails_Label" htmlFor="Name">
+                    Source of Fund
+                  </label>
+                  <select
+                    className="EmployementDetails_Input"
+                    name="source_of_fund"
+                    onChange={onChange}
+                    required
+                  >
+                    <option value="Salary">Salary</option>
+                    <option value="abc">abc</option>
+                  </select>
+                </div>
+                <div className="contain_1">
+                  <label className="EmployementDetails_Label" htmlFor="Name">
+                    Type of Industry
+                  </label>
+                  <select
+                    className="EmployementDetails_Input"
+                    name="type_of_industry"
+                    onChange={onChange}
+                    required
+                  >
+                    <option value="Banking">Banking</option>
+                    <option value="abc">abc</option>
+                  </select>
 
-                <label className="EmployementDetails_Label" htmlFor="Name">
-                  Current Organization Name
-                </label>
-                <input
-                  onChange={onChange}
-                  name="current_organization_name"
-                  className="EmployementDetails_Input"
-                  type="text"
-                  required
-                />
+                  <label className="EmployementDetails_Label" htmlFor="Name">
+                    Current Organization Name
+                  </label>
+                  <input
+                    onChange={onChange}
+                    name="current_organization_name"
+                    className="EmployementDetails_Input"
+                    type="text"
+                    required
+                  />
 
-                <label className="EmployementDetails_Label" htmlFor="Name">
-                  Tenure in current job(yy)
-                </label>
-                <input
-                  name="tenure_in_current_job"
-                  onChange={onChange}
-                  className="EmployementDetails_Input"
-                  type="number"
-                  required
-                />
+                  <label className="EmployementDetails_Label" htmlFor="Name">
+                    Tenure in current job(yy)
+                  </label>
+                  <input
+                    name="tenure_in_current_job"
+                    onChange={onChange}
+                    className="EmployementDetails_Input"
+                    type="number"
+                    required
+                  />
 
-                <label className="EmployementDetails_Label" htmlFor="Name">
-                  Total work Experience(yy)
-                </label>
-                <input
-                  name="total_work_experience"
-                  onChange={onChange}
-                  className="EmployementDetails_Input"
-                  type="number"
-                  required
-                />
+                  <label className="EmployementDetails_Label" htmlFor="Name">
+                    Total work Experience(yy)
+                  </label>
+                  <input
+                    name="total_work_experience"
+                    onChange={onChange}
+                    className="EmployementDetails_Input"
+                    type="number"
+                    required
+                  />
+                </div>
               </div>
             ) : (
               <div className="EmployementDetails_form_1">

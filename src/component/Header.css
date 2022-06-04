@@ -16,7 +16,7 @@
   position: absolute;
   top: 100%;
   transform: translateY(-100%);
-  color: rgb(212, 46, 74);
+  color: #832625;
 }
 @media only screen and (max-width: 480px) {
   .header_text {

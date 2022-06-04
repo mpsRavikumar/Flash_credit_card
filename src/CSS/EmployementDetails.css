@@ -12,13 +12,18 @@
 }
 .EmployementDetails_form_1 {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
-  height: 250rem;
-  width: 400rem;
+  /* height: 250rem; */
+  /* width: 400rem; */
 }
 .nature_of_employment {
   margin-top: 20rem;
+}
+.contain_1 {
+  width: 400rem;
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 480px) {
@@ -29,9 +34,7 @@
     font-size: 10px;
     width: 80vw;
   }
-  /* .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
+  .main {
+    width: 90vw;
+  }
 }
