@@ -71,11 +71,11 @@
   .customertext {
     font-size: 8rem;
   }
-  .submit_btn {
+  /* .submit_btn {
     height: 30rem;
     width: 90%;
     margin: 0;
-  }
+  } */
 }
 @media only screen and (max-width: 480px) {
   .contain {
