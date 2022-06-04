@@ -1,7 +1,7 @@
 .mycard {
   height: auto;
   width: 200rem;
-  margin: 15rem;
+  margin: 10rem;
   border: 1px solid #832625;
   border-radius: 2rem;
 }
@@ -15,4 +15,9 @@ ul {
   width: auto;
   font-size: 15rem;
   padding: 10rem;
+}
+@media only screen and (max-width: 480px) {
+  .mycard {
+    width: 300rem;
+  }
 }

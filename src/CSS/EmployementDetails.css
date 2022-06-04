@@ -1,27 +1,27 @@
+.main {
+  margin-top: 40rem;
+}
 .EmployementDetails_Label {
   font-size: 15px;
-  margin: 5rem 10rem 0rem 10rem;
+  font-weight: bold;
+  margin: 15rem 10rem 0rem 0rem;
 }
 .EmployementDetails_Input {
-  font-size: 10px;
-  color: grey;
-  height: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
   width: 280rem;
-  margin: 0 10rem;
-  padding-left: 5rem;
+  padding: 0rem 10rem 0rem 10rem;
 }
 .EmployementDetails_form_1 {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
-  /* height: 250rem; */
-  /* width: 400rem; */
 }
-.nature_of_employment {
+/* .nature_of_employment {
   margin-top: 20rem;
-}
+} */
 .contain_1 {
-  width: 400rem;
+  width: 320rem;
   display: flex;
   flex-direction: column;
 }
@@ -47,15 +47,26 @@
   display: flex;
   flex-direction: column;
 }
-
+input[type="radio"] {
+  margin: 5rem;
+}
+.employement_btn {
+  margin-top: 45rem !important;
+}
+@media only screen and (max-width: 719px) {
+  .EmployementDetails_Input {
+    width: 85vw;
+  }
+}
 @media only screen and (max-width: 480px) {
   .EmployementDetails_form_1 {
     height: auto;
     flex-direction: column;
   }
   .EmployementDetails_Input {
-    font-size: 10px;
-    width: 80vw;
+    font-size: 14px;
+    font-weight: bold;
+    width: 85vw;
   }
   .main {
     width: 90vw;
@@ -76,5 +87,10 @@
   .container_3 .box input {
     /* width: auto; */
     width: 100%;
+  }
+  .submit_btn {
+    height: 40rem;
+    width: 90vw !important;
+    margin: 0;
   }
 }

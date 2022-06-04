@@ -6,6 +6,7 @@ import flash_logo from "../Images/flash-logo.png";
 import TermAndCondition from "../Modal/TermAndCondition";
 import Logo from "../component/Logo";
 import Header from "../component/Header";
+import Footer from "../component/Footer";
 
 function VerifyWithOTP() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -52,6 +53,7 @@ function VerifyWithOTP() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

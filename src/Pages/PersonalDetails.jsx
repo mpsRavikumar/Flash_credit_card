@@ -76,7 +76,7 @@ function PersonalDetails() {
       <Header />
       <div className="main">
         <Logo />
-        <SubTitle text="We would like to know you beter " />
+        <SubTitle text="We would like to know you better " />
         <div className="PersonalDetails_forms">
           <form
             method="post"

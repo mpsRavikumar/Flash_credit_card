@@ -1,11 +1,11 @@
 .PersonalDetails_forms {
-  margin-top: 10rem;
+  margin-top: -10rem;
 }
 .PersonalDetails_form {
   height: auto;
   display: flex;
   /* align-items: center; */
-  width: 600rem;
+  /* width: 600rem; */
   flex-wrap: wrap;
   /* flex-direction: column; */
 }
@@ -19,18 +19,19 @@
 }
 .PersonalDetails_label {
   font-size: 15px;
-  margin: 5rem 10rem 0rem 10rem;
+  font-weight: bold;
+  margin: 15rem 10rem 0rem 10rem;
 }
 .PersonalDetails_input {
-  font-size: 10px;
-  color: grey;
-  height: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
   width: 280rem;
-  margin: 0 10rem;
-  padding-left: 5rem;
+  margin-right: 10rem;
+  padding: 0rem 10rem 0rem 10rem;
 }
 .PersonalDetails_checkbox {
-  margin: 10rem 0px 5px 10rem;
+  margin: 40rem 0px 5px 10rem;
   display: flex;
 }
 .PersonalDetails_input_checkbox {
@@ -48,10 +49,9 @@ input {
 }
 
 input:valid {
-  border: 2px solid rgb(51, 138, 51, 0.6);
+  color: rgb(51, 138, 51, 0.6);
 }
 input:invalid {
-  /* border: 2px solid rgb(250, 128, 114, 0.6); */
   color: #832625;
 }
 @media only screen and (max-width: 480px) {
@@ -59,9 +59,11 @@ input:invalid {
     flex-direction: column;
   }
   .PersonalDetails_input {
-    width: 70vw;
+    width: 90vw;
   }
-  /* .submit_btn {
-    margin-left: 20rem;
-  } */
+  .submit_btn {
+    height: 40rem;
+    width: 160rem;
+    margin: 0;
+  }
 }

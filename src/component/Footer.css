@@ -1,3 +1,14 @@
 .footer {
   grid-area: footer;
+  height: 30rem;
+  width: 100%;
+  font-size: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: white;
+}
+.footer_text {
+  margin: auto 5rem;
 }

@@ -16,8 +16,18 @@ function SelectCard() {
       <Header />
       <div className="main">
         <Logo />
-        <SubTitle text="Credit Card Online Application" />
         <div className="main">
+          <p
+            style={{
+              width: "200rem",
+              margin: "auto",
+              fontSize: "18rem",
+              fontWeight: "bold",
+              marginBottom: "30rem",
+            }}
+          >
+            Select your Card
+          </p>
           <div className="mycards">
             <Mycard
               img_src="https://s3-ap-southeast-1.amazonaws.com/paymatrixuploads/static/new_home/credit_card_images/axis_bank_privilege_credit_card.png"
@@ -34,8 +44,8 @@ function SelectCard() {
           </div>
           <button className="select_card_btn">Next</button>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

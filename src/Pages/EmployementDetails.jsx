@@ -8,6 +8,7 @@ import axios from "axios";
 import Header from "../component/Header";
 import Logo from "../component/Logo";
 import Footer from "../component/Footer";
+import SubTitle from "../component/SubTitle";
 function EmployementDetails() {
   const {
     formData,
@@ -82,10 +83,10 @@ function EmployementDetails() {
       <Header />
       <div className="main">
         <Logo />
-
+        <SubTitle text="We are Almost there.Tell us sommething about your work !" />
         <div className="nature_of_employment">
           <label className="EmployementDetails_Label">
-            nature of Employment
+            Nature of Employment
           </label>
           <br />
           <input
@@ -308,12 +309,16 @@ function EmployementDetails() {
               </div>
             )}
           </form>
-          <button type="submit" className="submit_btn" form="form3">
+          <button
+            type="submit"
+            className="submit_btn employement_btn"
+            form="form3"
+          >
             Next
           </button>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

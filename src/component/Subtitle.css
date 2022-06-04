@@ -1,5 +1,13 @@
 .subtitle {
-  font-size: 22px;
+  font-size: 28px;
   color: #832625;
   height: auto;
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 719px) {
+  .subtitle {
+    font-size: 25rem;
+  }
 }
