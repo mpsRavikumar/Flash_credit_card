@@ -6,7 +6,7 @@ import Dashboard from "./Pages/Dashboard";
 import EmployementDetails from "./Pages/EmployementDetails";
 import PersonalDetails from "./Pages/PersonalDetails";
 import SelectCard from "./Pages/SelectCard";
-import VarifyWithOTP from "./Pages/VarifyWithOTP";
+import VerifyWithOTP from "./Pages/VerifyWithOTP";
 
 export const FormContext = createContext({
   formData: {
@@ -77,7 +77,7 @@ function App() {
           <Route path="personalDetails" element={<PersonalDetails />} />
           <Route path="employementDetails" element={<EmployementDetails />} />
           <Route path="selectCard" element={<SelectCard />} />
-          <Route path="varifyWithOtp" element={<VarifyWithOTP />} />
+          <Route path="verifyWithOtp" element={<VerifyWithOTP />} />
         </Routes>
       </BrowserRouter>
     </FormContext.Provider>

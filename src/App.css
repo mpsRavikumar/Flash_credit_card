@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  accent-color: rgb(235, 98, 121);
+  accent-color: #832625;
 }
 html {
   font-size: 6.25%;
@@ -45,7 +45,7 @@ input:valid {
 }
 input:invalid {
   /* border: 2px solid rgb(250, 128, 114, 0.6); */
-  color: salmon;
+  color: #832625;
 }
 
 /* ********* global css ends here *********** */

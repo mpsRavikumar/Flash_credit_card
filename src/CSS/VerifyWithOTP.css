@@ -1,0 +1,36 @@
+.form {
+  margin-top: 20rem;
+  width: 500rem;
+  padding: 20rem;
+  border: 2px solid #832625;
+}
+.VerifyOTP_Label {
+  font-size: 12rem;
+  margin: 5rem 10rem 0rem 10rem;
+}
+.VerifyOTP_Input {
+  font-size: 10rem;
+  color: grey;
+  height: 25rem;
+  width: 280rem;
+  margin: 0 10rem;
+}
+.resend {
+  font-size: 12rem;
+  text-align: end;
+}
+.Verify_btn {
+  height: 30rem;
+  width: 120rem;
+  font-size: 15rem;
+  color: white;
+  background-color: #832625;
+  border: none;
+  margin: auto;
+  margin-top: 10rem;
+}
+@media only screen and (max-width: 480px) {
+  .form {
+    width: 400rem;
+  }
+}

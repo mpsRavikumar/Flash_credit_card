@@ -222,61 +222,89 @@ function EmployementDetails() {
               </div>
             ) : (
               <div className="EmployementDetails_form_1">
-                <label className="EmployementDetails_Label" htmlFor="">
-                  Net Annual Income
-                </label>
-                <input
-                  type="number"
-                  name="net_annual_income"
-                  className="EmployementDetails_Input"
-                  onChange={onChange}
-                  min={0}
-                  required
-                />
-
-                <label className="EmployementDetails_Label" htmlFor="">
-                  Nature of Business
-                </label>
-                <input
-                  type="text"
-                  name="nature_of_business"
-                  className="EmployementDetails_Input"
-                  onChange={onChange}
-                  required
-                />
-
-                <label className="EmployementDetails_Label" htmlFor="">
-                  Ownership_type
-                </label>
-                <input
-                  type="text"
-                  name="ownership_type"
-                  className="EmployementDetails_Input"
-                  onChange={onChange}
-                  required
-                />
-
-                <label className="EmployementDetails_Label" htmlFor="">
-                  NO. of years in business
-                </label>
-                <input
-                  type="number"
-                  name="no_of_years_in_business"
-                  className="EmployementDetails_Input"
-                  onChange={onChange}
-                  required
-                />
-
-                <label className="EmployementDetails_Label" htmlFor="">
-                  Bank Employee number
-                </label>
-                <input
-                  type="number"
-                  name="bank_employee_no"
-                  className="EmployementDetails_Input"
-                  onChange={onChange}
-                  required
-                />
+                <div className="container_1">
+                  <div className="box">
+                    <label className="EmployementDetails_Label" htmlFor="">
+                      Net Annual Income
+                    </label>
+                    <input
+                      type="number"
+                      name="net_annual_income"
+                      className="EmployementDetails_Input"
+                      onChange={onChange}
+                      min={0}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="container_2">
+                  <div className="box">
+                    <label className="EmployementDetails_Label" htmlFor="Name">
+                      Occupation Code
+                    </label>
+                    <input
+                      onChange={onChange}
+                      name="occupation_code"
+                      className="EmployementDetails_Input"
+                      type="number"
+                      required
+                    />
+                  </div>
+                  <div className="box">
+                    <label className="EmployementDetails_Label" htmlFor="Name">
+                      Source of Fund
+                    </label>
+                    <select
+                      className="EmployementDetails_Input"
+                      name="source_of_fund"
+                      onChange={onChange}
+                      required
+                    >
+                      <option value="Salary">Salary</option>
+                      <option value="abc">abc</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="container_3">
+                  <div className="box">
+                    <label className="EmployementDetails_Label" htmlFor="">
+                      Nature of Business
+                    </label>
+                    <input
+                      type="text"
+                      name="nature_of_business"
+                      className="EmployementDetails_Input"
+                      onChange={onChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="container_4">
+                  <div className="box">
+                    <label className="EmployementDetails_Label" htmlFor="">
+                      Ownership_type
+                    </label>
+                    <input
+                      type="text"
+                      name="ownership_type"
+                      className="EmployementDetails_Input"
+                      onChange={onChange}
+                      required
+                    />
+                  </div>
+                  <div className="box">
+                    <label className="EmployementDetails_Label" htmlFor="">
+                      NO. of years in business
+                    </label>
+                    <input
+                      type="number"
+                      name="no_of_years_in_business"
+                      className="EmployementDetails_Input"
+                      onChange={onChange}
+                      required
+                    />
+                  </div>
+                </div>
               </div>
             )}
           </form>

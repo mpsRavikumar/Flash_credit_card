@@ -1,7 +1,7 @@
 .CustomerDetails_forms {
   width: 640rem;
   border: 2px solid #832625;
-  border-radius: 5rem;
+  border-radius: 0rem 0rem 5rem 5rem;
 }
 .CustomerDetails_form {
   display: flex;
@@ -13,13 +13,13 @@
 }
 
 .customerDetails_label {
-  font-size: 18px;
+  font-size: 18rem;
   margin: 5rem 10rem 0rem 10rem;
 }
 .CustomerDetailsInput {
-  font-size: 10px;
+  font-size: 10rem;
   color: grey;
-  height: 25px;
+  height: 25rem;
   width: 280rem;
   margin: 0 10rem;
   /* padding-left: 5rem; */
@@ -28,7 +28,7 @@
   margin-left: 0 !important;
   margin-top: 20rem !important;
   font-size: 20rem;
-  height: 40px;
+  height: 40rem;
   width: 20vw;
 
   color: white;
@@ -55,6 +55,28 @@
 }
 
 /* ************ Responsive Design ************  */
+@media only screen and (max-width: 960px) {
+  .widget {
+    width: 640rem;
+    height: 40rem;
+    align-items: flex-start;
+    padding-left: 20rem;
+  }
+  .contactIcon {
+    width: 25rem;
+    height: 25rem;
+    margin-left: 20rem;
+    padding: 2rem;
+  }
+  .customertext {
+    font-size: 8rem;
+  }
+  .submit_btn {
+    height: 30rem;
+    width: 90%;
+    margin: 0;
+  }
+}
 @media only screen and (max-width: 480px) {
   .contain {
     width: 90vw;
@@ -68,12 +90,16 @@
   .widget {
     flex-direction: row;
     justify-content: left;
+    width: 90%;
   }
   .contactIcon,
   .customertext {
     margin-top: auto;
     margin-left: 5rem;
     transform: translateY(-50%);
+  }
+  .customertext {
+    font-size: 13rem;
   }
   .customerDetails_label {
     font-size: 10px;
@@ -90,25 +116,5 @@
     width: 100%;
     margin: 0 0;
     padding-left: 0;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .widget {
-    width: 80vw;
-    height: 40rem;
-    align-items: flex-start;
-    padding-left: 20rem;
-  }
-  .contactIcon {
-    width: 20rem;
-    height: 20rem;
-    margin-left: 20rem;
-  }
-  .customertext {
-    font-size: 8rem;
-  }
-  .submit_btn {
-    width: 90%;
-    margin: 0;
   }
 }

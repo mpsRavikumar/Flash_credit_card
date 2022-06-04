@@ -1,125 +1,21 @@
-.MF4-page {
-  background-image: url("../Images/PageBg.jpg");
-  background-repeat: no-repeat;
-  height: 672px;
-  width: 100%;
-  margin-left: -16px;
-  background-size: cover;
-  margin-top: -112px;
+.mycards {
+  display: flex;
+  height: auto;
+  justify-content: center;
 }
-.container {
-  max-width: 1220px;
-  width: 100%;
-}
-.MF4-flashlogo {
-  margin-top: 130px;
-  /* margin-left: 100px; */
-  margin-bottom: 30px;
-}
-.MF4-SelectCard {
-  font-size: 16px;
-  margin-top: -20px;
-  margin-left: 216px;
-  font-weight: bold;
-}
-
-.MF4-Card-1 {
-  /* margin-left: 100px; */
-  height: 330px;
-  width: 175px;
-  border: 1px black solid;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.MF4-Card-2 {
-  /* margin-left: 61px; */
-  height: 330px;
-  width: 175px;
-  border: 1px black solid;
-
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.MF4-Card-3 {
-  /* margin-left: 45px; */
-  height: 330px;
-  width: 175px;
-  border: 1px black solid;
-
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.MF4-Card-Img {
-  padding: 5px;
-}
-.MF4-Card-Details {
-  font-size: 12px;
-}
-.MF4-Card-Details-li {
-  color: #832625;
-}
-.MF4-Card-Details-Link {
-  color: #832625;
-}
-
-.MF4-next-Button {
-  margin-left: 60px;
-  border: 1px solid #832625;
-  height: 39px;
-  width: 121px;
-  color: #fff;
+.select_card_btn {
+  height: 40rem;
+  width: 150rem;
+  font-size: 20rem;
+  color: white;
   background-color: #832625;
-  margin-top: 20px;
-  border-radius: 0%;
+  border: none;
+  margin: auto;
+  margin-top: 10rem;
 }
-
 @media only screen and (max-width: 480px) {
-  .MF4-flashlogo {
-    margin-top: 10rem;
-    margin-left: 52px;
-    width: 13rem;
-  }
-
-  .MF4-header {
-    font-size: 32px;
-    margin-left: 48px;
-    width: 121%;
-  }
-
-  .MF4-Card-1 {
-    /* margin-left: 20px; */
-    margin: auto;
-    /* justify-content: center; */
-    height: 450px;
-    width: 369px;
-    padding: 12px;
-    border: 2px solid rgb(230, 103, 124);
-    /* margin: auto; */
-  }
-
-  .MF4-Card-2 {
-    margin: auto;
-    height: 450px;
-    width: 369px;
-    margin-top: 20px;
-    padding: 12px;
-    border: 2px solid rgb(230, 103, 124);
-  }
-
-  .MF4-Card-3 {
-    margin: auto;
-    height: 450px;
-    width: 369px;
-    margin-top: 20px;
-    padding: 12px;
-    border: 2px solid rgb(230, 103, 124);
-  }
-  .MF4-next-Button {
-    margin-left: 30px;
-    margin-top: 10px;
-    height: 53px;
-    width: 85%;
-    font-weight: bold;
-    font-size: 25px;
+  .mycards {
+    flex-direction: column;
+    align-items: center;
   }
 }
