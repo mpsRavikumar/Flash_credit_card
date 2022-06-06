@@ -43,10 +43,10 @@
   color: rgb(122, 115, 115);
   width: 75vw;
 }
-input {
+/* input {
   border: 1px solid rgb(172, 168, 168);
   border-radius: 2rem;
-}
+} */
 
 /* input:valid {
   color: rgba(13, 56, 13, 0.6);

@@ -8,6 +8,7 @@ import Footer from "../component/Footer";
 import Logo from "../component/Logo";
 import SubTitle from "../component/SubTitle";
 import contactIcon from "../Images/ContactDetailsIcon.png";
+import { useForm } from "react-hook-form";
 
 function CustomerDetails() {
   const {
@@ -15,7 +16,11 @@ function CustomerDetails() {
     formData: { id, etag, mobile_no, pan_no, pincode, net_annual_income },
     setFormData,
   } = useContext(FormContext);
-
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const onChange = (e) => {
     setFormData((previous) => {
       return {
@@ -30,7 +35,7 @@ function CustomerDetails() {
     e.preventDefault();
     const fd = { mobile_no, pan_no, pincode, net_annual_income };
     axios
-      .post("http://192.168.1.51:8082/bank_leads", fd)
+      .post("https://mwbapi.usecasetechnologies.com/bank_leads", fd)
       .then((res) => {
         // console.log(res);
         setFormData((previous) => {
@@ -71,6 +76,7 @@ function CustomerDetails() {
                 <input
                   // type="number"
                   name="mobile_no"
+                  placeholder="Mobile number"
                   className="CustomerDetailsInput"
                   onChange={onChange}
                   pattern="^[0-9]{10}$"
@@ -82,8 +88,9 @@ function CustomerDetails() {
                 </label>
 
                 <input
-                  type="number"
+                  // type="number"
                   name="pincode"
+                  placeholder="Pin code"
                   className="CustomerDetailsInput"
                   onChange={onChange}
                   pattern="^[0-9]{6}$"
@@ -96,10 +103,11 @@ function CustomerDetails() {
                 </label>
                 <input
                   type="text"
+                  placeholder="PAN number"
                   name="pan_no"
                   className="CustomerDetailsInput"
                   onChange={onChange}
-                  // pattern="^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$"
+                  pattern="^([A-Z]){5}([0-9]){4}([A-Z]){1}?$"
                   required
                 />
 
@@ -108,6 +116,7 @@ function CustomerDetails() {
                 </label>
                 <input
                   type="number"
+                  placeholder="Annual income"
                   name="net_annual_income"
                   className="CustomerDetailsInput"
                   onChange={onChange}

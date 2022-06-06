@@ -63,7 +63,7 @@ function EmployementDetails() {
     };
     e.preventDefault();
     axios
-      .patch("http://192.168.1.51:8082/bank_leads/" + id, fd, {
+      .patch("https://mwbapi.usecasetechnologies.com/bank_leads" + id, fd, {
         headers: {
           "If-Match": etag,
         },
@@ -95,7 +95,7 @@ function EmployementDetails() {
             onClick={handleSelfEmployes}
           />
           <label htmlFor="salaried" className="EmployementDetails_Label">
-            salaried
+            Salaried
           </label>
           <input
             type="radio"
@@ -106,7 +106,7 @@ function EmployementDetails() {
             onClick={handleSalaried}
           />
           <label htmlFor="selfemployed" className="EmployementDetails_Label">
-            self employed
+            Self employed
           </label>
           <br />
         </div>
@@ -122,11 +122,16 @@ function EmployementDetails() {
             {salaried ? (
               <div className="EmployementDetails_form_1">
                 <div className="contain_1">
-                  <label className="EmployementDetails_Label" htmlFor="">
+                  <label
+                    className="EmployementDetails_Label"
+                    htmlFor="annual_income"
+                  >
                     Net Annual Income
                   </label>
                   <input
+                    id="annual_income"
                     type="number"
+                    placeholder="Annual income"
                     name="net_annual_income"
                     className="EmployementDetails_Input"
                     onChange={onChange}
@@ -147,18 +152,23 @@ function EmployementDetails() {
                     <option value="abc">abc</option>
                   </select>
 
-                  <label className="EmployementDetails_Label" htmlFor="Name">
+                  <label
+                    className="EmployementDetails_Label"
+                    htmlFor="occupation_code"
+                  >
                     Occupation Code
                   </label>
                   <input
                     onChange={onChange}
                     name="occupation_code"
+                    id="occupation_code"
+                    placeholder="Occupation code"
                     className="EmployementDetails_Input"
                     type="number"
                     required
                   />
 
-                  <label className="EmployementDetails_Label" htmlFor="Name">
+                  <label className="EmployementDetails_Label" htmlFor="fund">
                     Source of Fund
                   </label>
                   <select
@@ -172,7 +182,7 @@ function EmployementDetails() {
                   </select>
                 </div>
                 <div className="contain_1">
-                  <label className="EmployementDetails_Label" htmlFor="Name">
+                  <label className="EmployementDetails_Label" htmlFor="">
                     Type of Industry
                   </label>
                   <select
@@ -185,34 +195,46 @@ function EmployementDetails() {
                     <option value="abc">abc</option>
                   </select>
 
-                  <label className="EmployementDetails_Label" htmlFor="Name">
+                  <label
+                    className="EmployementDetails_Label"
+                    htmlFor="organization_name"
+                  >
                     Current Organization Name
                   </label>
                   <input
                     onChange={onChange}
+                    id="organization_name"
+                    placeholder="Current Organization name"
                     name="current_organization_name"
                     className="EmployementDetails_Input"
                     type="text"
                     required
                   />
 
-                  <label className="EmployementDetails_Label" htmlFor="Name">
+                  <label className="EmployementDetails_Label" htmlFor="tenure">
                     Tenure in current job(yy)
                   </label>
                   <input
                     name="tenure_in_current_job"
                     onChange={onChange}
+                    placeholder="Tenure"
+                    id="tenure"
                     className="EmployementDetails_Input"
                     type="number"
                     required
                   />
 
-                  <label className="EmployementDetails_Label" htmlFor="Name">
+                  <label
+                    className="EmployementDetails_Label"
+                    htmlFor="work_experience"
+                  >
                     Total work Experience(yy)
                   </label>
                   <input
                     name="total_work_experience"
                     onChange={onChange}
+                    placeholder="Work experience"
+                    id="work_experience"
                     className="EmployementDetails_Input"
                     type="number"
                     required
@@ -223,11 +245,16 @@ function EmployementDetails() {
               <div className="EmployementDetails_form_1">
                 <div className="container_1">
                   <div className="box">
-                    <label className="EmployementDetails_Label" htmlFor="">
+                    <label
+                      className="EmployementDetails_Label"
+                      htmlFor="annual_income"
+                    >
                       Net Annual Income
                     </label>
                     <input
                       type="number"
+                      placeholder="Annual income"
+                      id="annual_income"
                       name="net_annual_income"
                       className="EmployementDetails_Input"
                       onChange={onChange}
@@ -238,24 +265,30 @@ function EmployementDetails() {
                 </div>
                 <div className="container_2">
                   <div className="box">
-                    <label className="EmployementDetails_Label" htmlFor="Name">
+                    <label
+                      className="EmployementDetails_Label"
+                      htmlFor="ocuupation_code"
+                    >
                       Occupation Code
                     </label>
                     <input
                       onChange={onChange}
                       name="occupation_code"
+                      placeholder="Occupation code"
+                      id="ocuupation_code"
                       className="EmployementDetails_Input"
                       type="number"
                       required
                     />
                   </div>
                   <div className="box">
-                    <label className="EmployementDetails_Label" htmlFor="Name">
+                    <label className="EmployementDetails_Label" htmlFor="fund">
                       Source of Fund
                     </label>
                     <select
                       className="EmployementDetails_Input"
                       name="source_of_fund"
+                      id="fund"
                       onChange={onChange}
                       required
                     >
@@ -266,11 +299,16 @@ function EmployementDetails() {
                 </div>
                 <div className="container_3">
                   <div className="box">
-                    <label className="EmployementDetails_Label" htmlFor="">
+                    <label
+                      className="EmployementDetails_Label"
+                      htmlFor="nature_of_business"
+                    >
                       Nature of Business
                     </label>
                     <input
                       type="text"
+                      id="nature_of_business"
+                      placeholder="Nature of business"
                       name="nature_of_business"
                       className="EmployementDetails_Input"
                       onChange={onChange}
@@ -280,11 +318,16 @@ function EmployementDetails() {
                 </div>
                 <div className="container_4">
                   <div className="box">
-                    <label className="EmployementDetails_Label" htmlFor="">
+                    <label
+                      className="EmployementDetails_Label"
+                      htmlFor="ownership_type"
+                    >
                       Ownership_type
                     </label>
                     <input
                       type="text"
+                      placeholder="Ownership type"
+                      id="ownership_type"
                       name="ownership_type"
                       className="EmployementDetails_Input"
                       onChange={onChange}
@@ -292,11 +335,16 @@ function EmployementDetails() {
                     />
                   </div>
                   <div className="box">
-                    <label className="EmployementDetails_Label" htmlFor="">
+                    <label
+                      className="EmployementDetails_Label"
+                      htmlFor="business_years"
+                    >
                       NO. of years in business
                     </label>
                     <input
                       type="number"
+                      placeholder="No. of years in business"
+                      id="business_years"
                       name="no_of_years_in_business"
                       className="EmployementDetails_Input"
                       onChange={onChange}

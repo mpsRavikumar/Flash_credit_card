@@ -50,7 +50,7 @@ function PersonalDetails() {
     };
     e.preventDefault();
     axios
-      .patch("http://192.168.1.51:8082/bank_leads/" + id, fd, {
+      .patch("https://mwbapi.usecasetechnologies.com/bank_leads" + id, fd, {
         headers: {
           "If-Match": etag,
         },
@@ -90,12 +90,14 @@ function PersonalDetails() {
               <input
                 className="PersonalDetails_input"
                 name="name"
+                placeholder="Full name"
                 type="text"
                 onChange={onChange}
+                pattern="^[A-Za-z]+$"
                 required
               />
 
-              <label className="PersonalDetails_label" htmlFor="Name">
+              <label className="PersonalDetails_label" htmlFor="dob">
                 Date of Birth
               </label>
               <input
@@ -106,13 +108,13 @@ function PersonalDetails() {
                 required
               />
 
-              <label className="PersonalDetails_label" htmlFor="Name">
+              <label className="PersonalDetails_label" htmlFor="gender">
                 Gender
               </label>
               <select
                 className="PersonalDetails_input"
                 name="gender"
-                id=""
+                id="gender"
                 onChange={onChange}
                 required
               >
@@ -121,24 +123,26 @@ function PersonalDetails() {
                 <option value="Female">Female</option>
               </select>
 
-              <label className="PersonalDetails_label" htmlFor="Name">
+              <label className="PersonalDetails_label" htmlFor="residence">
                 Current residence address
               </label>
               <input
                 className="PersonalDetails_input"
                 type="text"
+                placeholder="Current residence address"
+                id="residence"
                 name="current_residence_address"
                 onChange={onChange}
                 required
               />
 
-              <label className="PersonalDetails_label" htmlFor="Name">
+              <label className="PersonalDetails_label" htmlFor="education">
                 Education
               </label>
               <select
                 className="PersonalDetails_input"
                 name="education"
-                id=""
+                id="education"
                 onChange={onChange}
                 required
               >
@@ -151,46 +155,55 @@ function PersonalDetails() {
             </div>
 
             <div className="PersonalDetails_form2">
-              <label className="PersonalDetails_label" htmlFor="Name">
+              <label className="PersonalDetails_label" htmlFor="mothers_name">
                 Mother's Maiden Name
               </label>
               <input
                 className="PersonalDetails_input"
                 name="mothers_maiden_name"
                 type="text"
+                id="mothers_name"
                 required
+                placeholder="mother's maiden name"
+                pattern="^[A-Za-z]+$"
                 onChange={onChange}
               />
 
-              <label className="PersonalDetails_label" htmlFor="Name">
+              <label className="PersonalDetails_label" htmlFor="city">
                 City
               </label>
               <input
                 className="PersonalDetails_input"
                 type="text"
                 name="city"
+                id="city"
+                placeholder="City"
                 onChange={onChange}
                 required
               />
 
-              <label className="PersonalDetails_label" htmlFor="Name">
+              <label className="PersonalDetails_label" htmlFor="state">
                 State
               </label>
               <input
                 className="PersonalDetails_input"
                 type="text"
+                id="state"
+                placeholder="State"
                 name="state"
                 onChange={onChange}
                 required
               />
 
-              <label className="PersonalDetails_label" htmlFor="Name">
+              <label className="PersonalDetails_label" htmlFor="email">
                 Email Id
               </label>
               <input
                 className="PersonalDetails_input"
                 type="email"
                 name="email"
+                placeholder="Email id"
+                id="email"
                 onChange={onChange}
                 required
               />

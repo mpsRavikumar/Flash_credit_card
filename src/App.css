@@ -37,11 +37,14 @@ html {
 }
 
 input {
-  border: 1px solid rgb(172, 168, 168);
+  border: 1px solid rgb(172, 168, 168, 0.8);
   border-radius: 2rem;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0, 0.8);
 }
-
+input::placeholder {
+  color: rgb(0, 0, 0, 0.6);
+}
 input:valid {
   color: rgb(13, 99, 42, 0.8);
 }

@@ -33,7 +33,7 @@ function VerifyWithOTP() {
     console.log(fd);
     e.preventDefault();
     axios
-      .patch("http://192.168.1.51:8082/bank_leads/" + id, fd, {
+      .patch("https://mwbapi.usecasetechnologies.com/bank_leads" + id, fd, {
         headers: {
           "If-Match": etag,
         },
@@ -66,12 +66,7 @@ function VerifyWithOTP() {
                   Enter one time password that we have send to your Mobile
                   Number.
                 </label>
-                <input
-                  className="VerifyOTP_Input"
-                  name="bank_employee_no"
-                  onChange={onChange}
-                  type="text"
-                />
+                <input type="number" className="VerifyOTP_Input" />
               </div>
               <div className="box">
                 <a className="resend">Resend OTP ?</a>
@@ -85,15 +80,19 @@ function VerifyWithOTP() {
                 I agree to terms and conditions of OTP
               </label>
               <div className="box">
-                <input
-                  className="VerifyOTP_Input"
-                  type="number"
-                  id="staff_number"
-                />
                 <label className="VerifyOTP_Label" htmlFor="staff_number">
                   Please enter the Bank Staff Employee No. if you are guided by
                   the Bank Official.
                 </label>
+                <input
+                  className="VerifyOTP_Input"
+                  type="number"
+                  name="bank_employee_no"
+                  onChange={onChange}
+                  id="staff_number"
+                  pattern="^[0-9]{10}$"
+                  required
+                />
               </div>
               <button className="Verify_btn">Submit</button>
             </form>
