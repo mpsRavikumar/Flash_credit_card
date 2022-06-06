@@ -63,7 +63,7 @@ function EmployementDetails() {
     };
     e.preventDefault();
     axios
-      .patch("https://mwbapi.usecasetechnologies.com/bank_leads" + id, fd, {
+      .patch("https://mwbapi.usecasetechnologies.com/bank_leads/" + id, fd, {
         headers: {
           "If-Match": etag,
         },
