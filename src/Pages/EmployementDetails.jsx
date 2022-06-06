@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../CSS/EmployementDetails.css";
-import header_image from "../Images/header_image.png";
-import flash_logo from "../Images/flash-logo.png";
 import { FormContext } from "../App";
 import axios from "axios";
 import Header from "../component/Header";
@@ -46,6 +44,7 @@ function EmployementDetails() {
   const handleSelfEmployes = (e) => {
     setsalaried(true);
   };
+
   const navigate = useNavigate();
 
   const sendData = (e) => {
@@ -62,7 +61,6 @@ function EmployementDetails() {
       no_of_years_in_business,
       bank_employee_no,
     };
-    console.log(fd);
     e.preventDefault();
     axios
       .patch("http://192.168.1.51:8082/bank_leads/" + id, fd, {
@@ -71,7 +69,7 @@ function EmployementDetails() {
         },
       })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         navigate("/selectCard");
       })
       .catch((err) => {
@@ -317,8 +315,8 @@ function EmployementDetails() {
             Next
           </button>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

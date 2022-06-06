@@ -9,7 +9,7 @@ html {
 }
 .grid-container {
   display: grid;
-  grid-template-rows: 70rem 700rem 30rem;
+  grid-template-rows: 70rem 1fr 30rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "header  header  header"
@@ -28,12 +28,12 @@ html {
 }
 .main {
   display: flex;
-  padding: 40rem;
+  margin: 10rem 40rem 40rem 40rem;
   flex-direction: column;
   background-image: url("../src/Images/PageBg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right bottom;
+  background-position: right;
 }
 
 input {
@@ -43,15 +43,25 @@ input {
 }
 
 input:valid {
-  color: rgb(51, 138, 51, 0.6);
+  color: rgb(13, 99, 42, 0.8);
 }
 input:invalid {
   color: #832625;
+}
+input:invalid[focused="true"] {
+  border: 1px solid #832625;
 }
 button {
   cursor: pointer;
 }
 /* ********* global css ends here *********** */
+
+@media only screen and (max-width: 960px) {
+  .header {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .main {
     margin: auto;
@@ -61,10 +71,8 @@ button {
   html {
     font-size: 4.5%;
   }
-}
-@media only screen and (max-width: 960px) {
-  .main {
-    background-image: none;
-    /* margin: auto; */
+  .grid-container {
+    display: grid;
+    grid-template-rows: 0rem 1fr 30rem;
   }
 }

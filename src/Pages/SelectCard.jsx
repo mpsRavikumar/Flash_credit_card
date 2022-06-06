@@ -44,8 +44,8 @@ function SelectCard() {
           </div>
           <button className="select_card_btn">Next</button>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

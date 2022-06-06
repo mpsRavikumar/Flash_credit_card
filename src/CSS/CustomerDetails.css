@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   height: auto;
   /* width: 400rem; */
-  margin-left: 15rem;
+  margin-left: 10rem;
 }
 .customer_contain {
   display: flex;
@@ -29,8 +29,8 @@
   padding: 0rem 10rem 0rem 10rem;
 }
 .submit_btn {
-  /* margin-left: 0 !important; */
   margin-top: 20rem !important;
+
   font-size: 20rem;
   height: 40rem;
   width: 20vw;
@@ -126,6 +126,6 @@
     /* margin-left: 5rem; */
     height: 30rem;
     width: 90vw !important;
-    margin-left: -2 !important;
+    margin-left: 5rem !important;
   }
 }

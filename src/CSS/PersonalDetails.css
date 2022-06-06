@@ -48,9 +48,9 @@ input {
   border-radius: 2rem;
 }
 
-input:valid {
-  color: rgb(51, 138, 51, 0.6);
-}
+/* input:valid {
+  color: rgba(13, 56, 13, 0.6);
+} */
 input:invalid {
   color: #832625;
 }

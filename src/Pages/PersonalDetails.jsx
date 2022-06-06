@@ -48,7 +48,6 @@ function PersonalDetails() {
       education,
       email,
     };
-    console.log(fd);
     e.preventDefault();
     axios
       .patch("http://192.168.1.51:8082/bank_leads/" + id, fd, {
@@ -57,7 +56,7 @@ function PersonalDetails() {
         },
       })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setFormData((previous) => {
           return {
             ...previous,
@@ -214,8 +213,8 @@ function PersonalDetails() {
             </button>
           </form>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
 
     //

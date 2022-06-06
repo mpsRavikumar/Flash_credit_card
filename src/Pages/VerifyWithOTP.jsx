@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../CSS/VerifyWithOTP.css";
 import header_image from "../Images/header_image.png";
 import flash_logo from "../Images/flash-logo.png";
@@ -7,10 +7,52 @@ import TermAndCondition from "../Modal/TermAndCondition";
 import Logo from "../component/Logo";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
+import { FormContext } from "../App";
+import axios from "axios";
 
 function VerifyWithOTP() {
-  const [modalShow, setModalShow] = React.useState(false);
+  const {
+    formData: { id, etag, bank_employee_no },
+    setFormData,
+  } = useContext(FormContext);
+  // const [modalShow, setModalShow] = React.useState(false);
+  const onChange = (e) => {
+    setFormData((previous) => {
+      return {
+        ...previous,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+  const navigate = useNavigate();
 
+  const onSubmit = (e) => {
+    const fd = {
+      bank_employee_no,
+    };
+    console.log(fd);
+    e.preventDefault();
+    axios
+      .patch("http://192.168.1.51:8082/bank_leads/" + id, fd, {
+        headers: {
+          "If-Match": etag,
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        setFormData((previous) => {
+          return {
+            ...previous,
+            id: res.data._id,
+            etag: res.data._etag,
+          };
+        });
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   return (
     <div className="grid-container">
       <Header />
@@ -18,13 +60,18 @@ function VerifyWithOTP() {
         <div className="contain">
           <Logo />
           <div className="form">
-            <form>
+            <form onSubmit={onSubmit}>
               <div className="box">
                 <label className="VerifyOTP_Label">
                   Enter one time password that we have send to your Mobile
                   Number.
                 </label>
-                <input className="VerifyOTP_Input" type="text" />
+                <input
+                  className="VerifyOTP_Input"
+                  name="bank_employee_no"
+                  onChange={onChange}
+                  type="text"
+                />
               </div>
               <div className="box">
                 <a className="resend">Resend OTP ?</a>

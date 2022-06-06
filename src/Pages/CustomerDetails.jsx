@@ -1,9 +1,6 @@
-import React, { useContext, useState } from "react";
-import header_image from "../Images/header_image.png";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "../CSS/CustomerDetails.css";
-import flash_logo from "../Images/flash-logo.png";
-import ContactDetailsIcon from "../Images/ContactDetailsIcon.png";
 import { FormContext } from "../App";
 import axios from "axios";
 import Header from "../component/Header";
@@ -30,12 +27,12 @@ function CustomerDetails() {
   const navigate = useNavigate();
   const onSubmit = (e) => {
     // const { mobile_no, pan_no, pincode, net_annual_income } = formData;
-    const fd = { mobile_no, pan_no, pincode, net_annual_income };
     e.preventDefault();
+    const fd = { mobile_no, pan_no, pincode, net_annual_income };
     axios
-      .post("http://192.168.1.51:8082/bank_leads/", fd)
+      .post("http://192.168.1.51:8082/bank_leads", fd)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setFormData((previous) => {
           return {
             ...previous,
@@ -85,7 +82,7 @@ function CustomerDetails() {
                 </label>
 
                 <input
-                  // type="number"
+                  type="number"
                   name="pincode"
                   className="CustomerDetailsInput"
                   onChange={onChange}
